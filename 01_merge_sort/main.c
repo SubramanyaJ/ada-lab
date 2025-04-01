@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define MAX 100000
+#define MAX 1000
 
 void merge(int *arr, int left, int mid, int right) {
 	int i, j, k;
