@@ -1,6 +1,6 @@
 all:
-	gcc main.c -o main graph.c
-	cat ./graph.txt | ./main
+	gcc main.c -o main.out graph.c
+	cat ./graph.txt | ./main.out
 
 clean:
-	rm main
+	rm main.out
