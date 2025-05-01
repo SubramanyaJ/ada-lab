@@ -37,7 +37,7 @@ void dijkstra(int **graph, int vertices, int start) {
 				!visited[i]
 				&& graph[curr][i]
 				&& dist[curr] != INT_MAX
-				&& dist[curr] + graph[curr][i] < dist[i]
+				&& dist[curr] + graph[i][curr] < dist[i]
 			) {
 				dist[i] = dist[curr] + graph[curr][i];
 			}
