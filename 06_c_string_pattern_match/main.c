@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int BruteForceStringMatch(char T[], char P[]) {
+int BFSM(char T[], char P[]) {
 	int n = strlen(T);
 	int m = strlen(P);
 
@@ -18,20 +18,20 @@ int BruteForceStringMatch(char T[], char P[]) {
 }
 
 int main() {
-	char text[1000], pattern[1000];
+	char t[1000], p[1000];
 
 	printf("Enter the text: ");
-	fgets(text, sizeof(text), stdin);
-	text[strcspn(text, "\n")] = '\0';
+	fgets(t, sizeof(t), stdin);
+	t[strcspn(t, "\n")] = '\0';
 
 	printf("Enter the pattern to search: ");
-	fgets(pattern, sizeof(pattern), stdin);
-	pattern[strcspn(pattern, "\n")] = '\0';
+	fgets(p, sizeof(p), stdin);
+	p[strcspn(p, "\n")] = '\0';
 
-	int index = BruteForceStringMatch(text, pattern);
+	int idx = BFSM(t, p);
 
-	if (index != -1)
-		printf("Pattern found at index %d\n", index);
+	if (idx != -1)
+		printf("Pattern found at index %d\n", idx);
 	else
 		printf("Pattern not found.\n");
 
