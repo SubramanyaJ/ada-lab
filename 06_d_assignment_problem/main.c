@@ -48,11 +48,6 @@ int main() {
 	printf("Enter the number of persons/jobs (n): ");
 	scanf("%d", &n);
 
-	if (n > MAX) {
-		printf("Maximum supported size is %d.\n", MAX);
-		return 1;
-	}
-
 	printf("Enter the %dx%d cost matrix:\n", n, n);
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
