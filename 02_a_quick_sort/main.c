@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX 100
+#define MAX 5
 
 void quick_sort(int *arr, int low, int high);
 int partition(int *arr, int low, int high);

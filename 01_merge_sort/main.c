@@ -70,33 +70,22 @@ void printArray(int *arr, int size) {
 
 int main() {
 	int max = MAX;
-	clock_t start, end;
-	FILE *fp = fopen("data.txt", "w");
-	for(int i = 1; i <= max; i++) {
-//		printf("%d elements\n", i);
-		int *arr, size = i;
-//		printf("Enter the size of the array : ");
-//		scanf("%d", &size);
+		int *arr, size;
+		printf("Enter the size of the array : ");
+		scanf("%d", &size);
 		arr = malloc(size*sizeof(int));
 
-//		printf("Enter the elements : \n");
+		printf("Enter the elements : \n");
 		for(int j = 0; j < size; j++) {
-//			scanf("%d", &arr[j]);
-			arr[j] = rand();
+			scanf("%d", &arr[j]);
 		}
 
-//		printf("\n------------------------------------\n\nSize : %d\n", i);
-//		printf("Given array is\n");
-//		printArray(arr, size);
+		printf("Given array is\n");
+		printArray(arr, size);
 
-		start = clock();
 		sortArray(arr, size);
-		end = clock();
 
-//		printf("\nSorted array is \n");
-//		printArray(arr, size);
-		fprintf(fp, "%d, %d\n", (int) (end - start), i);
-	}
-	fclose(fp);
+		printf("\nSorted array is \n");
+		printArray(arr, size);
 	return 0;
 }
